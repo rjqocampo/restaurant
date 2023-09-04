@@ -34,7 +34,7 @@ export default function showHeader() {
   ul.appendChild(liBook);
 
   const buttonBook = document.createElement('button');
-  buttonBook.textContent = 'BOOK A TABLE';
+  buttonBook.textContent = 'CONTACT';
   buttonAbout.setAttribute('type', 'button');
   liBook.appendChild(buttonBook);
 }

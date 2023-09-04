@@ -48,22 +48,32 @@ export default function showLanding() {
   const buttonCuisine = document.createElement('button');
   buttonCuisine.textContent = 'SEE MENU';
   buttonCuisine.setAttribute('type', 'button');
-  sectionCuisine.appendChild(buttonCuisine);
+  divCuisine.appendChild(buttonCuisine);
+
+  const h5 = document.createElement('h5');
+  h5.textContent = '日本食';
+  sectionCuisine.appendChild(h5);
 
   const image1 = new Image();
   image1.src = Image1;
+  image1.classList.add('image-1');
   sectionCuisine.appendChild(image1);
 
   const image2 = new Image();
   image2.src = Image2;
+  image2.classList.add('image-2');
   sectionCuisine.appendChild(image2);
+
+
 
   const image3 = new Image();
   image3.src = Image3;
+  image3.classList.add('image-3');
   sectionCuisine.appendChild(image3);
 
   const image4 = new Image();
   image4.src = Image4;
+  image4.classList.add('image-4');
   sectionCuisine.appendChild(image4);
 
 }
