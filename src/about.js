@@ -64,8 +64,6 @@ export default function showLanding() {
   image2.classList.add('image-2');
   sectionCuisine.appendChild(image2);
 
-
-
   const image3 = new Image();
   image3.src = Image3;
   image3.classList.add('image-3');
@@ -76,4 +74,21 @@ export default function showLanding() {
   image4.classList.add('image-4');
   sectionCuisine.appendChild(image4);
 
+  // Footer Section
+  const footer = document.createElement('footer');
+  div.appendChild(footer);
+
+  const hl = document.createElement('div');
+  hl.classList.add('horizontal-line');
+  footer.appendChild(hl);
+
+  const buttonMenu = document.createElement('button');
+  buttonMenu.textContent = 'SEE MENU';
+  buttonMenu.setAttribute('type', 'button');
+  footer.appendChild(buttonMenu);
+
+  const buttonBook = document.createElement('button');
+  buttonBook.textContent = 'BOOK A TABLE'
+  buttonBook.setAttribute('type', 'button');
+  footer.appendChild(buttonBook);
 }
