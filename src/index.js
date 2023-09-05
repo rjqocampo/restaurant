@@ -54,4 +54,5 @@ function clearPage() {
 }
 
 showHeader();
-showAbout();
+// showAbout();
+showMenu();
