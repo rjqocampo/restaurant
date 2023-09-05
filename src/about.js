@@ -3,7 +3,7 @@ import Image2 from "./img/2.jpg";
 import Image3 from "./img/3.jpg";
 import Image4 from "./img/4.jpg";
 
-export default function showLanding() {
+export default function showAbout() {
   const content = document.querySelector('#content');
 
   const div = document.createElement('div');

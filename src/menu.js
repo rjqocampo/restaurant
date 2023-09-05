@@ -1,3 +1,3 @@
-export default showMenu() {
+export default function showMenu() {
   console.log('show menu');
 }
