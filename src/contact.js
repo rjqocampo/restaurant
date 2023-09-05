@@ -5,6 +5,7 @@ export default function showContact() {
   div.classList.add('contact')
   content.appendChild(div);
 
+  // Form Section
   const sectionForm = document.createElement('section');
   sectionForm.classList.add('form');
   div.appendChild(sectionForm);
@@ -52,4 +53,71 @@ export default function showContact() {
   buttonSubmit.setAttribute('type', 'button');
   buttonSubmit.textContent = 'RESERVE YOUR TABLE'
   form.appendChild(buttonSubmit);
+
+  // Details Section
+  const sectionDetails = document.createElement('section');
+  sectionDetails.classList.add('details')
+  div.appendChild(sectionDetails);
+
+  const h4 = document.createElement('h4');
+  h4.textContent = '+63 917 800 4219'
+  sectionDetails.appendChild(h4);
+
+  const hl = document.createElement('div');
+  sectionDetails.appendChild(hl);
+
+  const container = document.createElement('div');
+  container.classList.add('container-details');
+  sectionDetails.appendChild(container);
+
+  const column1 = document.createElement('div');
+  container.appendChild(column1);
+
+  const h5 = document.createElement('h5');
+  h5.textContent = 'saori.'
+  column1.appendChild(h5);
+
+  const h6 = document.createElement('h6');
+  h6.textContent = 'Japanese Sushi Bar'
+  column1.appendChild(h6);
+
+  const column2 = document.createElement('div');
+  container.appendChild(column2);
+
+  const divDetails1 = document.createElement('div');
+  column2.appendChild(divDetails1);
+
+  const weekdays = document.createElement('p');
+  weekdays.textContent = 'Monday - Thursday';
+  divDetails1.appendChild(weekdays)
+
+  const weekdaysSched = document.createElement('p');
+  weekdaysSched.textContent = '4 - 9PM';
+  divDetails1.appendChild(weekdaysSched);
+
+  const divDetails2 = document.createElement('div');
+  column2.appendChild(divDetails2);
+
+  const weekends = document.createElement('p');
+  weekends.textContent = 'Friday - Sunday';
+  divDetails2.appendChild(weekends);
+
+  const weekendsSched = document.createElement('p');
+  weekendsSched.textContent = '4 - 11PM';
+  divDetails2.appendChild(weekendsSched);
+
+  const column3 = document.createElement('div');
+  container.appendChild(column3);
+
+  const address = document.createElement('p');
+  address.textContent = '5883 Enriquez, Makati, Metro Manila, Philippines'
+  column3.appendChild(address);
+
+  const phone = document.createElement('p');
+  phone.textContent = '+63 917 800 4219';
+  column3.appendChild(phone);
+
+  const email = document.createElement('p');
+  email.textContent = 'saorimnl@gmail.com'
+  column3.appendChild(email);
 }

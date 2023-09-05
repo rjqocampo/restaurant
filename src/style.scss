@@ -260,7 +260,6 @@ footer {
 
 .form {
   display: grid;
-  justify-items: center;
   align-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
@@ -268,7 +267,7 @@ footer {
     margin: 100px 0px;
     width: min(500px, 100%);
     &:first-child {
-      // justify-self: end;
+      justify-self: end;
       h3 {
         font-family: 'Italiana', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-size: clamp(2.5rem, calc(2.5rem + 1vw), 5rem);      
@@ -276,9 +275,11 @@ footer {
       p {
         font-size: 0.9rem;
         margin: 10px 0px;
+        width: 85%;
       }
     }
     &:last-child {
+      justify-self: start;
       form {
         display: grid;
         input {
@@ -331,6 +332,7 @@ footer {
   body {
     div {
       .form {
+        margin-top: 50px;
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr;
         gap: 0px;
