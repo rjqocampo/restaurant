@@ -68,7 +68,8 @@ Link to live website: https://rjqocampo.github.io/restaurant/
       > The method above is cloning using an SSH key. If you do not have an SSH key, there are other methods to clone a repository. [Click here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to read more.
 
   4. Return to the directory where you cloned the repository
-  5. Select the `index.html` file and open in your preferred web browser
+  5. Navigate to the `/dist` directory
+  6. Select the `index.html` file and open in your preferred web browser
 
 # Features
 
