@@ -32,19 +32,21 @@ export default function showContact() {
   inputEmail.required = true;
   form.appendChild(inputEmail);
 
+  const divForm3 = document.createElement('div');
+  form.appendChild(divForm3);
+
   const inputGuest = document.createElement('input');
   inputGuest.setAttribute('type', 'number');
   inputGuest.setAttribute('min', '2');
   inputGuest.setAttribute('max', '6');
   inputGuest.setAttribute('placeholder', '6 guests');
   inputGuest.required = true;
-  form.appendChild(inputGuest);
+  divForm3.appendChild(inputGuest);
 
   const inputDate = document.createElement('input');
-  inputDate.setAttribute('type', 'datetime-local');
-  inputDate.setAttribute('placeholder', 'Today at 6PM');
+  inputDate.setAttribute('type', 'date');
   inputDate.required = true;
-  form.appendChild(inputDate);
+  divForm3.appendChild(inputDate);
 
   const buttonSubmit = document.createElement('button');
   buttonSubmit.setAttribute('type', 'button');

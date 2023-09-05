@@ -121,7 +121,6 @@ header {
   row-gap: 10px;
   h3 {
     font-family: 'Italiana', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    // font-size: 10rem;
     font-size: clamp(1rem, calc(1rem + 13vw), 10rem);
     z-index: 1;
 
@@ -257,7 +256,92 @@ footer {
   }
 }
 
+/* --- Form --- */
+
+.form {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  >div {
+    margin: 100px 0px;
+    width: min(500px, 100%);
+    &:first-child {
+      // justify-self: end;
+      h3 {
+        font-family: 'Italiana', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: clamp(2.5rem, calc(2.5rem + 1vw), 5rem);      
+      }
+      p {
+        font-size: 0.9rem;
+        margin: 10px 0px;
+      }
+    }
+    &:last-child {
+      form {
+        display: grid;
+        input {
+          color: $theme-light;
+          font-size: 1.1rem;
+          background-color: transparent;
+          border: none;
+          border-bottom: 2px solid $theme-light;
+          padding: 10px 15px;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: $theme-light;
+          }
+          &[type="email"] {
+            width: 100%;
+          }
+          &[type="date"] {
+            &::-webkit-calendar-picker-indicator {
+              filter: invert(1);
+            }
+          }
+        }
+        div {
+          display: grid;
+          gap: 25px;
+          grid-template-columns: 1fr 1fr;
+        }
+        button {
+          background-color: transparent;
+          padding: 20px 30px;
+          border: none;
+          justify-self: end;
+          cursor: pointer;
+
+          transition: 0.3s;
+          &:hover {
+            transform: translateX(5px)
+          }
+        }
+      }
+    }
+  }
+}
+
 /* --- Breakpoints --- */
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  body {
+    div {
+      .form {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px;
+        >div {
+          margin: 0px;
+          padding: 40px;
+        }
+      }
+    }
+  }
+ }
  
 @media all and (max-width: 480px) {
   body {
@@ -301,6 +385,16 @@ footer {
           dt {
             font-size: 1.2rem;
           }
+        }
+      }
+      .form {
+        margin-top: 50px;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px;
+        >div {
+          margin: 0px;
+          padding: 20px;
         }
       }
     }
