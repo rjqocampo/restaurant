@@ -107,4 +107,13 @@ export default function showAbout() {
       }, 650);
     })
   })
+
+  buttonBook.addEventListener('click', () => {
+    scrollToTop();
+
+    setTimeout(() => {
+      clearPage();
+      showContact();
+    }, 650);
+  })
 }

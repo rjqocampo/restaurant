@@ -53,6 +53,11 @@ function showHeader() {
     clearPage();
     showMenu();
   })
+
+  buttonBook.addEventListener('click', () => {
+    clearPage();
+    showContact();
+  })
 }
 
 function clearPage() {
@@ -66,7 +71,6 @@ function scrollToTop() {
 }
 
 showHeader();
-// showAbout();
-showContact();
+showAbout();
 
 export {clearPage, scrollToTop};

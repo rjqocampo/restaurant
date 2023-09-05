@@ -79,7 +79,7 @@ header {
       padding: 5px 2px;
       cursor: pointer;
 
-      transition: all 0.3s;
+      transition: all 0.2s;
       border-bottom: 1px solid transparent;
       &:hover {
         border-bottom: 1px solid;
@@ -89,8 +89,6 @@ header {
 }
 
 /* --- About__Hero --- */
-
-
 
 .hero {
   height: 100vh;
@@ -324,7 +322,7 @@ footer {
   
             transition: 0.3s;
             &:hover {
-              transform: translateX(5px)
+              transform: translateX(15px)
             }
           }
         }

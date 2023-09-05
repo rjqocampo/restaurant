@@ -1,3 +1,6 @@
+import showAbout from "./about";
+import showContact from "./contact";
+
 export default function showMenu() {
   const content = document.querySelector('#content');
   
@@ -85,4 +88,22 @@ export default function showMenu() {
   buttonBook.textContent = 'BOOK A TABLE'
   buttonBook.setAttribute('type', 'button');
   footer.appendChild(buttonBook);
+
+  buttonAbout.addEventListener('click', () => {
+    scrollToTop();
+
+    setTimeout(() => {
+      clearPage();
+      showAbout();
+    }, 650);
+  })
+
+  buttonBook.addEventListener('click', () => {
+    scrollToTop();
+
+    setTimeout(() => {
+      clearPage();
+      showContact();
+    }, 650);
+  })
 }
