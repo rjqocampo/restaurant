@@ -2,6 +2,8 @@ import Image1 from "./img/1.jpg";
 import Image2 from "./img/2.jpg";
 import Image3 from "./img/3.jpg";
 import Image4 from "./img/4.jpg";
+import showMenu from "./menu";
+import {clearPage, scrollToTop} from "./index";
 
 export default function showAbout() {
   const content = document.querySelector('#content');
@@ -48,6 +50,7 @@ export default function showAbout() {
   const buttonCuisine = document.createElement('button');
   buttonCuisine.textContent = 'SEE MENU';
   buttonCuisine.setAttribute('type', 'button');
+  buttonCuisine.classList.add('button-menu');
   divCuisine.appendChild(buttonCuisine);
 
   const h5 = document.createElement('h5');
@@ -85,10 +88,24 @@ export default function showAbout() {
   const buttonMenu = document.createElement('button');
   buttonMenu.textContent = 'SEE MENU';
   buttonMenu.setAttribute('type', 'button');
+  buttonMenu.classList.add('button-menu');
   footer.appendChild(buttonMenu);
 
   const buttonBook = document.createElement('button');
   buttonBook.textContent = 'BOOK A TABLE'
   buttonBook.setAttribute('type', 'button');
   footer.appendChild(buttonBook);
+
+  const allButtonMenu = document.querySelectorAll('.button-menu');
+  allButtonMenu.forEach((button) => {
+    button.addEventListener('click', () => {
+      scrollToTop();
+
+      setTimeout(() => {
+        clearPage();
+        showMenu();
+      }, 650);
+    })
+  })
+  
 }

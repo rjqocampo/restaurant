@@ -44,15 +44,27 @@ function showHeader() {
 
   buttonAbout.addEventListener('click', () => {
     clearPage();
+    showAbout();
+  })
+
+  buttonMenu.addEventListener('click', () => {
+    scrollToTop()
+    clearPage();
     showMenu();
   })
 }
 
 function clearPage() {
   const main = document.querySelector('#content div');
-  main.replaceChildren();
+  main.remove();
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
 }
 
 showHeader();
-// showAbout();
-showMenu();
+showAbout();
+
+export {clearPage, scrollToTop};

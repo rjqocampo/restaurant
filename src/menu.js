@@ -25,7 +25,6 @@ export default function showMenu() {
   function createDescriptionTitle(content, parent) {
     const dt = document.createElement('dt');
     const dl = document.querySelector(parent);
-    console.log(dl);
     dt.textContent = content;
     dl.appendChild(dt);
   }
