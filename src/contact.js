@@ -64,6 +64,7 @@ export default function showContact() {
   sectionDetails.appendChild(h4);
 
   const hl = document.createElement('div');
+  hl.classList.add('contact-line');
   sectionDetails.appendChild(hl);
 
   const container = document.createElement('div');

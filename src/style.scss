@@ -60,6 +60,7 @@ header {
   grid-template-columns: 1fr 2fr;
   justify-content: space-between;
   align-items: center;
+
   h1 {
     font-size: 2.5rem;
   }
@@ -89,9 +90,10 @@ header {
 
 /* --- About__Hero --- */
 
+
+
 .hero {
   height: 100vh;
-
   display: grid;
   align-items: center;
   h1 {
@@ -256,70 +258,115 @@ footer {
   }
 }
 
-/* --- Form --- */
+/* --- Contact --- */
 
-.form {
+.contact {
   display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  >div {
-    margin: 100px 0px;
-    width: min(500px, 100%);
-    &:first-child {
-      justify-self: end;
-      h3 {
-        font-family: 'Italiana', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: clamp(2.5rem, calc(2.5rem + 1vw), 5rem);      
+  grid-template-rows: 0fr 1fr;
+  margin: 0px -50px -20px -50px;
+  .form {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    >div {
+      margin: 100px 0px;
+      width: min(500px, 100%);
+      &:first-child {
+        justify-self: end;
+        h3 {
+          font-family: 'Italiana', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          font-size: clamp(2.5rem, calc(2.5rem + 1vw), 5rem);      
+        }
+        p {
+          font-size: 0.9rem;
+          margin: 10px 0px;
+          width: 85%;
+        }
       }
-      p {
-        font-size: 0.9rem;
-        margin: 10px 0px;
-        width: 85%;
-      }
-    }
-    &:last-child {
-      justify-self: start;
-      form {
-        display: grid;
-        input {
-          color: $theme-light;
-          font-size: 1.1rem;
-          background-color: transparent;
-          border: none;
-          border-bottom: 2px solid $theme-light;
-          padding: 10px 15px;
-          &:focus {
-            outline: none;
-          }
-          &::placeholder {
+      &:last-child {
+        justify-self: start;
+        form {
+          display: grid;
+          input {
             color: $theme-light;
+            font-size: 1.1rem;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $theme-light;
+            padding: 10px 15px;
+            &:focus {
+              outline: none;
+            }
+            &::placeholder {
+              color: $theme-light;
+            }
+            &[type="email"] {
+              width: 100%;
+            }
+            &[type="date"] {
+              &::-webkit-calendar-picker-indicator {
+                filter: invert(1);
+              }
+            }
           }
-          &[type="email"] {
-            width: 100%;
+          div {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: 1fr 1.75fr;
           }
-          &[type="date"] {
-            &::-webkit-calendar-picker-indicator {
-              filter: invert(1);
+          button {
+            background-color: transparent;
+            padding: 20px 30px;
+            border: none;
+            justify-self: end;
+            cursor: pointer;
+  
+            transition: 0.3s;
+            &:hover {
+              transform: translateX(5px)
             }
           }
         }
-        div {
-          display: grid;
-          gap: 25px;
-          grid-template-columns: 1fr 1fr;
-        }
-        button {
-          background-color: transparent;
-          padding: 20px 30px;
-          border: none;
-          justify-self: end;
-          cursor: pointer;
+      }
+    }
+  }
+  .details {
+    color: $theme-dark;
+    background-color: $theme-light;
+    padding: 50px;
+    h4 {
+      font-family: 'UnifrakturMaguntia', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: clamp(2rem, calc(2rem + 1.5vw), 4rem);   
+      white-space: nowrap;
+    }
+    .contact-line {
+      border-bottom: 1px solid $theme-dark;
+      margin: 20px 0px;
+    }
+    .container-details {
+      font-size: 0.9rem;
 
-          transition: 0.3s;
-          &:hover {
-            transform: translateX(5px)
-          }
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: end;
+      gap: 30px;
+      div:nth-child(1) {
+        h5 {
+          font-size: 2.5rem;
+        }
+        h6 {
+          
+        }
+      }
+      div:nth-child(2) {
+        div {
+          margin-top: 20px;
+        }
+      }
+      div:nth-child(3) {
+        p {
+          margin-top: 20px;
         }
       }
     }
@@ -327,18 +374,38 @@ footer {
 }
 
 /* --- Breakpoints --- */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    div {
+      .contact {
+        .form {
+          margin-top: 50px;
+          grid-template-columns: none;
+          grid-template-rows: 1fr 1fr;
+          gap: 0px;
+          >div {
+            margin: 0px;
+            padding: 40px;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media all and (min-width: 480px) and (max-width: 768px) {
   body {
     div {
-      .form {
-        margin-top: 50px;
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
-        gap: 0px;
-        >div {
-          margin: 0px;
-          padding: 40px;
+      .contact {
+        .form {
+          margin-top: 50px;
+          grid-template-columns: none;
+          grid-template-rows: 1fr 1fr;
+          gap: 0px;
+          >div {
+            margin: 0px;
+            padding: 40px;
+          }
         }
       }
     }
@@ -389,14 +456,24 @@ footer {
           }
         }
       }
-      .form {
-        margin-top: 50px;
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
-        gap: 0px;
-        >div {
-          margin: 0px;
-          padding: 20px;
+      .contact {
+        margin: 0px -10px -20px -10px;
+        .form {
+          margin-top: 50px;
+          grid-template-columns: none;
+          grid-template-rows: 1fr 1fr;
+          gap: 0px;
+          >div {
+            margin: 0px;
+            padding: 20px;
+          }
+        }
+        .details {
+          .container-details {
+            grid-template-columns: none;
+            grid-template-rows: repeat(3, 1fr);
+            align-items: center;
+          }
         }
       }
     }
