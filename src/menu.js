@@ -1,5 +1,6 @@
 import showAbout from "./about";
 import showContact from "./contact";
+import {clearPage, scrollToTop} from "./index";
 
 export default function showMenu() {
   const content = document.querySelector('#content');

@@ -3,6 +3,7 @@ import Image2 from "./img/2.jpg";
 import Image3 from "./img/3.jpg";
 import Image4 from "./img/4.jpg";
 import showMenu from "./menu";
+import showContact from "./contact";
 import {clearPage, scrollToTop} from "./index";
 
 export default function showAbout() {

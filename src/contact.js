@@ -1,3 +1,5 @@
+import Arrow from "./img/arrow.svg"
+
 export default function showContact() {
   const content = document.querySelector('#content');
   
@@ -34,6 +36,7 @@ export default function showContact() {
   form.appendChild(inputEmail);
 
   const divForm3 = document.createElement('div');
+  divForm3.classList.add('container-input');
   form.appendChild(divForm3);
 
   const inputGuest = document.createElement('input');
@@ -49,10 +52,19 @@ export default function showContact() {
   inputDate.required = true;
   divForm3.appendChild(inputDate);
 
+  const divForm4 = document.createElement('div');
+  divForm4.classList.add('container-button-submit');
+  form.appendChild(divForm4);
+
   const buttonSubmit = document.createElement('button');
-  buttonSubmit.setAttribute('type', 'button');
+  buttonSubmit.setAttribute('type', 'submit');
   buttonSubmit.textContent = 'RESERVE YOUR TABLE'
-  form.appendChild(buttonSubmit);
+  divForm4.appendChild(buttonSubmit);
+
+  const arrow = new Image();
+  arrow.src = Arrow;
+  arrow.classList.add('arrow');
+  divForm4.appendChild(arrow);
 
   // Details Section
   const sectionDetails = document.createElement('section');
@@ -71,18 +83,24 @@ export default function showContact() {
   container.classList.add('container-details');
   sectionDetails.appendChild(container);
 
-  const column1 = document.createElement('div');
-  container.appendChild(column1);
+  const column3 = document.createElement('div');
+  column3.classList.add('contact-details');
+  container.appendChild(column3);
 
-  const h5 = document.createElement('h5');
-  h5.textContent = 'saori.'
-  column1.appendChild(h5);
+  const address = document.createElement('p');
+  address.textContent = '5883 Enriquez, Makati, Metro Manila, Philippines'
+  column3.appendChild(address);
 
-  const h6 = document.createElement('h6');
-  h6.textContent = 'Japanese Sushi Bar'
-  column1.appendChild(h6);
+  const phone = document.createElement('p');
+  phone.textContent = '+63 917 800 4219';
+  column3.appendChild(phone);
+
+  const email = document.createElement('p');
+  email.textContent = 'saorimnl@gmail.com'
+  column3.appendChild(email);
 
   const column2 = document.createElement('div');
+  column2.classList.add('contact-schedule');
   container.appendChild(column2);
 
   const divDetails1 = document.createElement('div');
@@ -107,18 +125,14 @@ export default function showContact() {
   weekendsSched.textContent = '4 - 11PM';
   divDetails2.appendChild(weekendsSched);
 
-  const column3 = document.createElement('div');
-  container.appendChild(column3);
+  const column1 = document.createElement('div');
+  container.appendChild(column1);
 
-  const address = document.createElement('p');
-  address.textContent = '5883 Enriquez, Makati, Metro Manila, Philippines'
-  column3.appendChild(address);
+  const h5 = document.createElement('h5');
+  h5.textContent = 'saori.'
+  column1.appendChild(h5);
 
-  const phone = document.createElement('p');
-  phone.textContent = '+63 917 800 4219';
-  column3.appendChild(phone);
-
-  const email = document.createElement('p');
-  email.textContent = 'saorimnl@gmail.com'
-  column3.appendChild(email);
+  const h6 = document.createElement('h6');
+  h6.textContent = 'Japanese Sushi Bar'
+  column1.appendChild(h6);
 }

@@ -235,7 +235,7 @@ footer {
     font-size: 1.8rem;
     color: $theme-dark;
     background-color: $theme-light;
-    width: 40%;
+    width: max(400px, 40%);
     height: 40px;
     padding-right: 20px;
     text-align: right;
@@ -308,21 +308,33 @@ footer {
               }
             }
           }
-          div {
+          .container-input {
             display: grid;
             gap: 25px;
             grid-template-columns: 1fr 1.75fr;
           }
-          button {
-            background-color: transparent;
-            padding: 20px 30px;
-            border: none;
+          .container-button-submit {
+            width: max-content;
+            padding: 20px;
+
+            display: flex;
             justify-self: end;
-            cursor: pointer;
-  
+            align-items: center;
+
             transition: 0.3s;
             &:hover {
-              transform: translateX(15px)
+              transform: translateX(20px)
+            }
+            button {
+              background-color: transparent;
+              border: none;
+              justify-self: end;
+              cursor: pointer;
+            }
+            .arrow {
+              height: 1.2rem;
+              width: 1.2rem;
+              filter: invert(88%) sepia(27%) saturate(368%) hue-rotate(328deg) brightness(105%) contrast(98%);
             }
           }
         }
@@ -349,24 +361,23 @@ footer {
       grid-template-columns: repeat(3, 1fr);
       align-items: end;
       gap: 30px;
-      div:nth-child(1) {
-        h5 {
-          font-size: 2.5rem;
-        }
-        h6 {
-          
-        }
-      }
-      div:nth-child(2) {
-        div {
-          margin-top: 20px;
-        }
-      }
-      div:nth-child(3) {
+      .contact-details {
         p {
           margin-top: 20px;
         }
       }
+      .contact-schedule {
+        div {
+          margin-top: 20px;
+        }
+      }
+      div:last-child {
+        h5 {
+          font-size: 2.5rem;
+        }
+      }
+
+
     }
   }
 }
@@ -471,6 +482,16 @@ footer {
             grid-template-columns: none;
             grid-template-rows: repeat(3, 1fr);
             align-items: center;
+            .contact-details {
+              p {
+                margin-top: 10px;
+              }
+            }
+            .contact-schedule {
+              div {
+                margin-top: 10px;
+              }
+            }
           }
         }
       }
