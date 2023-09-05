@@ -1,6 +1,7 @@
 import showAbout from "./about";
-import './style.scss';
 import showMenu from "./menu";
+import showContact from "./contact";
+import './style.scss';
 
 function showHeader() {
   const content = document.querySelector('#content');
@@ -65,6 +66,7 @@ function scrollToTop() {
 }
 
 showHeader();
-showAbout();
+// showAbout();
+showContact();
 
 export {clearPage, scrollToTop};
