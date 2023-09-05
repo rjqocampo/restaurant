@@ -188,16 +188,16 @@ header {
   }
 }
 
-/* --- About__Footer --- */
+/* --- Footer --- */
 
 footer {
-  height: 230px;
+  height: 170px;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   .horizontal-line {
-    margin: 80px 0px 10px 0px;
+    margin: 80px 0px 10px 10px;
     width: 60%;
     border-bottom: 1px solid $theme-light;
   }
@@ -205,7 +205,7 @@ footer {
     background-color: transparent;
     border: none;
     width: max-content;
-    padding: 20px 10px;
+    padding: 8px 20px;
     text-align: left;
     cursor: pointer;
 
@@ -220,7 +220,7 @@ footer {
 
 .menu {
   position: relative;
-  margin: 50px 0px;
+  margin-top: 50px;
 
   h2 {
     color: rgb(39, 35, 32);

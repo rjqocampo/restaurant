@@ -67,4 +67,22 @@ export default function showMenu() {
   createDescriptionDefinition('classic japanese young tea leaves that are steamed, rolled, and then dried', '.beverages-list');
   createDescriptionTitle('genmaicha', '.beverages-list');
   createDescriptionDefinition('traditional green tea leaves with toasted brown rice', '.beverages-list');
+
+  const footer = document.createElement('footer');
+  div.appendChild(footer);
+
+  const hl = document.createElement('hl');
+  hl.classList.add('horizontal-line');
+  footer.appendChild(hl);
+
+  const buttonAbout = document.createElement('button');
+  buttonAbout.textContent = 'ABOUT SAORI';
+  buttonAbout.setAttribute('type', 'button');
+  buttonAbout.classList.add('button-menu');
+  footer.appendChild(buttonAbout);
+
+  const buttonBook = document.createElement('button');
+  buttonBook.textContent = 'BOOK A TABLE'
+  buttonBook.setAttribute('type', 'button');
+  footer.appendChild(buttonBook);
 }
