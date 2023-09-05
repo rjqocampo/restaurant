@@ -2,7 +2,12 @@ export default function showMenu() {
   const content = document.querySelector('#content');
   
   const div = document.createElement('div');
+  div.classList.add('menu');
   content.appendChild(div);
+
+  const h2 = document.createElement('h2');
+  h2.textContent = '日本食';
+  div.appendChild(h2);
 
   function createCategory(content) {
     const h3 = document.createElement('h3');
@@ -35,18 +40,20 @@ export default function showMenu() {
   createCategory('appetizers');
   createDescriptionList('appetizers');
   createDescriptionTitle('edamame', '.appetizers-list');
-  createDescriptionDefinition('steamed young soybeans sprinkled with sea salt', '.appetizers-list');
+  createDescriptionDefinition('steamed young soybeans with sea salt', '.appetizers-list');
   createDescriptionTitle('agedashi tofu', '.appetizers-list');
   createDescriptionDefinition('deep-fried tofu served in a dashi-based broth with grated daikon, ginger, and bonito flakes', '.appetizers-list');
   createDescriptionTitle('goma ae', '.appetizers-list');
-  createDescriptionDefinition('blanched spinach or green beans dressed in a creamy sesame sauce', '.appetizers-list');
+  createDescriptionDefinition('blanched spinach or green beans dressed in sesame sauce', '.appetizers-list');
 
   createCategory('main');
   createDescriptionList('main');
-  createDescriptionTitle('kaiseki omakase', '.main-list');
-  createDescriptionDefinition('multi-course japanese meal that emphasizes seasonality and balance', '.main-list');
-  createDescriptionTitle('traditional omakase', '.main-list');
-  createDescriptionDefinition('traditional mulit-course meal, including sashimi, nigiri sushi, tempura, and other time-honored preparations', '.main-list');
+  createDescriptionTitle('honkaku kaiseki', '.main-list');
+  createDescriptionDefinition('multi-course japanese meal that emphasizes seasonality, balance and time-honored traditions', '.main-list');
+  createDescriptionTitle('neo kaiseki', '.main-list');
+  createDescriptionDefinition('multi-course japanese meal that emphasizes creativity and innovation', '.main-list');
+  createDescriptionTitle('omakase', '.main-list');
+  createDescriptionDefinition('multi-course japanese meal curated by the chef', '.main-list');
 
   createCategory('desserts');
   createDescriptionList('desserts');
@@ -58,7 +65,7 @@ export default function showMenu() {
   createCategory('beverages');
   createDescriptionList('beverages');
   createDescriptionTitle('sencha', '.beverages-list');
-  createDescriptionDefinition('classic japanese green tea with a refreshing and grassy flavor', '.beverages-list');
+  createDescriptionDefinition('classic japanese young tea leaves that are steamed, rolled, and then dried', '.beverages-list');
   createDescriptionTitle('genmaicha', '.beverages-list');
-  createDescriptionDefinition('green tea blended with roasted brown rice', '.beverages-list');
+  createDescriptionDefinition('traditional green tea leaves with toasted brown rice', '.beverages-list');
 }

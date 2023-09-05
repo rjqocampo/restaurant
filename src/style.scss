@@ -212,6 +212,47 @@ footer {
   }
 }
 
+/* --- Menu --- */
+
+.menu {
+  position: relative;
+  margin: 50px 0px;
+
+  h2 {
+    color: rgb(39, 35, 32);
+    font-size: 20rem;
+    line-height: 20rem;
+    font-weight: bold;
+    width: 0px;
+    position: absolute;
+    right: calc(0px + 20rem);
+    z-index: -1;
+  }
+  h3 {
+    font-size: 1.8rem;
+    color: $theme-dark;
+    background-color: $theme-light;
+    width: 40%;
+    height: 40px;
+    padding-right: 20px;
+    text-align: right;
+
+    display: grid;
+    align-items: center;
+  }
+  dl {
+    margin: 40px 15px;
+    dt {
+      font-size: 1.4rem;
+    }
+    dd {
+      font-size: 0.8rem;
+      font-style: italic;
+      margin-bottom: 40px;
+    }
+  }
+}
+
 /* --- Breakpoints --- */
  
 @media all and (max-width: 480px) {
@@ -242,6 +283,20 @@ footer {
         }
         .image-4 {
           display: none;
+        }
+      }
+      .menu {
+        h2 {
+          font-size: 10rem;
+        }
+        h3{
+          font-size: 1.5rem;
+          width: 100%;
+        }
+        dl {
+          dt {
+            font-size: 1.2rem;
+          }
         }
       }
     }
