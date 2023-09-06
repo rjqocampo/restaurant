@@ -1,6 +1,27 @@
 $theme-dark: #201E1D;
 $theme-light: #FDE9CC;
 
+@font-face {
+  font-family: 'Italiana';
+  src: url('./fonts/Italiana-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UnifrakturMaguntia';
+  src: url('./fonts/UnifrakturMaguntia-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* --- CSS Reset --- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -33,11 +54,6 @@ font-size: 100%;
 }
 
 /* --- Custom CSS --- */
-
-// font-family: 'Italiana', serif;
-// font-family: 'Lato', sans-serif;
-// font-family: 'UnifrakturMaguntia', cursive;
-
 html {
   scroll-behavior: smooth;
 }

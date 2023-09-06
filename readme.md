@@ -45,7 +45,7 @@ Found a bug or issue in the project? [Click here](https://github.com/rjqocampo/r
 * Optimize images more
 * Complete reservation feature and store the data
 * Restructure CSS into modules to reduce size and better maintainability
-* Restructure Javascript to better implement DRY methodology. For instance, making a function to handle creating the five images
+* Restructure Javascript to better implement DRY methodology. For instance, making a function to handle creating the five images. Also, turning the menu list into an array of objects.
 
 Looking to contribute ideas or features to the project? [Click here](https://github.com/rjqocampo/restaurant#contributions).
 
@@ -68,7 +68,7 @@ Link to live website: https://rjqocampo.github.io/restaurant/
       > The method above is cloning using an SSH key. If you do not have an SSH key, there are other methods to clone a repository. [Click here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to read more.
 
   4. Return to the directory where you cloned the repository
-  5. Navigate to the `/dist` directory
+  5. Open the `/restaurant` directory, then navigate to the `/dist` directory
   6. Select the `index.html` file and open in your preferred web browser
 
 # Features
