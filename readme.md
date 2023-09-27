@@ -73,7 +73,7 @@ Link to live website: https://rjqocampo.github.io/restaurant/
 
 # Features
 
-### Dynamic HTML Rendering
+### Dynamic Content Rendering
 
 Utilizing webpack and the DOM, the content of the page is rendered dynamically when navigating the website. The goal is to provide a smoother user experience.
 
@@ -112,6 +112,9 @@ Thank you for your contributions and I appreciate all interests in making this p
 If you have any questions, feel free to contact me.
 
 # Acknowledgement
+
+Thank you to [Github Pages](https://pages.github.com/) for the free hosting
+
 Thank you to [cottonbro studio](https://www.pexels.com/@cottonbro/) and [Airam Dato-on](https://www.pexels.com/@airamdphoto/) for the images
 
 Thank you to [Petra Pendic](https://dribbble.com/ppendic) for the design inspiration
